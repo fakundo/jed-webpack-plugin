@@ -1,0 +1,40 @@
+{
+  "name": "jed-webpack-plugin",
+  "version": "1.0.0",
+  "description": "Jed Webpack Plugin",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "gulp examples:dist && mocha",
+    "prepublish": "npm run test"
+  },
+  "keywords": [
+    "i18n",
+    "gettext",
+    "webpack",
+    "jed",
+    "internationalization"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fakundo/jed-webpack-plugin"
+  },
+  "author": "Roman Samoylov (https://github.com/fakundo)",
+  "license": "MIT",
+  "dependencies": {
+    "jed": "^1.1.0",
+    "jed-gettext-parser": "^1.0.0",
+    "webpack": "^1.13.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gutil": "^1.6.4",
+    "html-webpack-plugin": "^2.22.0",
+    "mocha": "^2.5.3",
+    "moment": "^2.14.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
