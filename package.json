@@ -1,7 +1,7 @@
 {
   "name": "jed-webpack-plugin",
-  "version": "1.0.0",
-  "description": "Jed Webpack Plugin",
+  "version": "1.0.1",
+  "description": "Webpack i18n plugin",
   "main": "lib/index.js",
   "scripts": {
     "test": "gulp examples:dist && mocha",

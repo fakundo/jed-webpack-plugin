@@ -55,7 +55,7 @@ var appleLabel2 = sprintf(ngettext('One apple', '%1$d apples', applesCount), app
 ##Options
 
 ```
-mo - path to translation file (.mo)
+mo - translation file path (.mo)
 defineJedIdentifier - (optional) name identifier for providing access to jed instance
 ```
 
