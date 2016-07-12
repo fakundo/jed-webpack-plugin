@@ -1,6 +1,6 @@
 #Jed Webpack Plugin
 
-[![npm](https://img.shields.io/npm/v/jed-webpack-plugin.svg?maxAge=2592000)](https://www.npmjs.com/package/jed-webpack-plugin)
+[![npm](https://img.shields.io/npm/v/jed-webpack-plugin.svg?maxAge=1592000)](https://www.npmjs.com/package/jed-webpack-plugin)
 
 Complete i18n solution with webpack and Jed (gettext style).
 
