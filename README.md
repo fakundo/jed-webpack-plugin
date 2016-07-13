@@ -46,10 +46,11 @@ entry - index.js
 ```js
 var label = gettext('Hello World');
 
-var applesCount = 10;
-var appleLabel1 = ngettext('One apple', '%% apples', applesCount).replace(/%%/, applesCount);
-// OR
-var appleLabel2 = sprintf(ngettext('One apple', '%1$d apples', applesCount), appleCount);
+// Plurals
+var n = 10;
+var appleLabel1 = ngettext('One apple', '%% apples', n).replace(/%%/, n);
+// or
+var appleLabel2 = jed.sprintf(ngettext('One apple', '%1$d apples', n), n);
 ```
 
 ##Options
