@@ -1,8 +1,8 @@
-#Jed Webpack Plugin
+#Jed (gettext style i18n) Webpack Plugin
 
 [![npm](https://img.shields.io/npm/v/jed-webpack-plugin.svg?maxAge=1592000)](https://www.npmjs.com/package/jed-webpack-plugin)
 
-Complete i18n solution with webpack and Jed (gettext style).
+Complete i18n solution with webpack and Jed.
 
 ##Installation
 ```
@@ -59,4 +59,4 @@ mo - translation file path (.mo)
 defineJedIdentifier - (optional) name identifier for providing access to jed instance
 ```
 
-Use Poedit for creating translation files and see examples.
+Use Poedit to create translation files from your source code and see examples.
