@@ -7,11 +7,8 @@ var locales = ['en-us', 'ru', 'de'];
 
 module.exports = locales.map(function(locale) {
   return {
-    entry: [
-      'webpack-dev-server/client?http://0.0.0.0:8080',
-      path.join(__dirname, 'src', 'index')
-    ],
-    devtool: 'eval',
+    entry: path.join(__dirname, 'src', 'index'),
+    devtool: 'source-map',
     output: {
       filename: locale + '.app.js',
       path: path.join(__dirname, 'dist'),
@@ -19,7 +16,7 @@ module.exports = locales.map(function(locale) {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.join(__dirname, 'index.html'),
+        template: path.join(__dirname, 'src', 'index.html'),
         filename: locale + '.index.html'
       }),
       new webpack.DefinePlugin({
