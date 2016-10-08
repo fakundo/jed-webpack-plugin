@@ -4,17 +4,19 @@ var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var statsConfig = {
+  colors: true,
+  chunks: false,
+  modules: false,
+  hash: false,
+  version: false
+};
+
 gulp.task('examples:dist', function(cb) {
   var webpackConfig = require('./examples/webpack.config');
   webpack(webpackConfig, function(err, stats) {
     if(err) throw new gutil.PluginError('webpack:build', err);
-    gutil.log('[webpack:build]', stats.toString({
-      colors: true,
-      chunks: false,
-      modules: false,
-      hash: false,
-      version: false
-    }));
+    gutil.log('[webpack:build]', stats.toString(statsConfig));
     cb();
   });
 });
@@ -33,13 +35,7 @@ gulp.task('examples:dev', function (cb) {
   // Start a webpack-dev-server
   new WebpackDevServer(webpack(webpackConfig), {
     publicPath: webpackConfig.output.publicPath,
-    stats: {
-      colors: true,
-      chunks: false,
-      modules: false,
-      hash: false,
-      version: false
-    }
+    stats: statsConfig
   }).listen(8080, 'localhost', function(err) {
     if(err) throw new gutil.PluginError('webpack-dev-server', err);
     gutil.log('[webpack-dev-server]', 'http://localhost:8080/webpack-dev-server/index.html');

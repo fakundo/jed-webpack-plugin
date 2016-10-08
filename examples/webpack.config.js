@@ -7,8 +7,11 @@ var locales = ['en-us', 'ru', 'de'];
 
 module.exports = locales.map(function(locale) {
   return {
-    entry: path.join(__dirname, 'src', 'index'),
-    devtool: 'source-map',
+    entry: [
+      'webpack-dev-server/client?http://0.0.0.0:8080',
+      path.join(__dirname, 'src', 'index')
+    ],
+    devtool: 'eval',
     output: {
       filename: locale + '.app.js',
       path: path.join(__dirname, 'dist'),
