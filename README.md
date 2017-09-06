@@ -1,15 +1,15 @@
-#Jed (gettext style i18n) Webpack Plugin
+# Jed (gettext style i18n) Webpack Plugin
 
 [![npm](https://img.shields.io/npm/v/jed-webpack-plugin.svg?maxAge=1592000)](https://www.npmjs.com/package/jed-webpack-plugin)
 
 Complete i18n solution with webpack and Jed.
 
-##Installation
+## Installation
 ```
 npm install jed-webpack-plugin --save-dev
 ```
 
-##Usage
+## Usage
 
 webpack.config.js
 ```js
@@ -53,7 +53,7 @@ var appleLabel1 = ngettext('One apple', '%% apples', n).replace(/%%/, n);
 var appleLabel2 = jed.sprintf(ngettext('One apple', '%1$d apples', n), n);
 ```
 
-##Options
+## Options
 
 ```
 mo - translation file path (.mo)
